@@ -1,84 +1,75 @@
-# Trainee-Inteli-Jr-Grupo02
+## Trainee Inteli JR G02
 
-## 📁 1. Estrutura do Sistema
+# 📁 Estrutura do Sistema
 
-> Descreva aqui como o projeto está organizado fisicamente (pastas e arquivos principais) e logicamente (arquitetura e rotas de navegação/API).
+## 📦 Organização do Projeto
 
-### Árvore de Arquivos
-Abaixo está a representação da estrutura de diretórios do projeto:
+Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arquivos) quanto logicamente (arquitetura e navegação/API).
 
+### 🗂️ Árvore de Arquivos
 
-📦 [nome-do-repositorio]
- ┣ 📂 [nome-da-pasta-1]      # [Breve descrição do que esta pasta contém, ex: Componentes reutilizáveis da interface]
- ┣ 📂 [nome-da-pasta-2]      # [Ex: Controladores da API e regras de negócio]
- ┣ 📂 [nome-da-pasta-3]      # [Ex: Configurações de banco de dados]
- ┣ 📜 [arquivo-principal.js] # [Ex: Ponto de entrada da aplicação]
- ┗ 📜 README.md
+```bash
+📦 nome-do-repositorio
+┣ 📂 nome-da-pasta-1        # Componentes reutilizáveis da interface
+┣ 📂 nome-da-pasta-2        # Controladores da API e regras de negócio
+┣ 📂 nome-da-pasta-3        # Configurações de banco de dados
+┣ 📜 arquivo-principal.js   # Ponto de entrada da aplicação
+┗ 📜 README.md
+```
 
+---
 
-2. Decisões Técnicas
-Liste os frameworks, linguagens e bibliotecas principais utilizados no projeto. É fundamental explicar o porquê de cada escolha (ex: curva de aprendizado, performance, familiaridade da equipe, exigência do escopo).
-Tecnologia / Ferramenta
-Finalidade no Projeto
-Por que foi escolhida?
-[Ex: React.js]
-[Ex: Criação da interface de usuário (Front-end)]
-[Ex: Escolhido pela facilidade em criar componentes reutilizáveis e familiaridade prévia da equipe.]
-[Ex: Node.js + Express]
-[Ex: Criação da API e back-end]
-[Ex: Permite utilizar JavaScript em toda a stack, acelerando o desenvolvimento.]
-[Ex: PostgreSQL]
-[Ex: Banco de dados relacional]
-[Ex: Necessidade de garantir integridade referencial nas tabelas de pedidos e usuários.]
+## ⚙️ Decisões Técnicas
 
+| Tecnologia / Ferramenta | Finalidade no Projeto                       | Por que foi escolhida?                                                  |
+| ----------------------- | ------------------------------------------- | ----------------------------------------------------------------------- |
+| React.js                | Criação da interface de usuário (Front-end) | Facilidade em criar componentes reutilizáveis e familiaridade da equipe |
+| Node.js + Express       | Criação da API e back-end                   | Permite usar JavaScript em toda a stack, acelerando o desenvolvimento   |
+| PostgreSQL              | Banco de dados relacional                   | Garante integridade referencial entre tabelas                           |
 
-3. Uso de Inteligência Artificial
-Detalhe se a equipe fez uso de ferramentas de IA (como ChatGPT, Gemini, GitHub Copilot, etc.) durante o desenvolvimento. Seja honesto e transparente sobre como ela ajudou no processo.
-Utilizou IA no projeto? [Sim / Não]
-(Se sim, preencha a tabela abaixo)
-Ferramenta de IA
-Ocasião / Finalidade
-Como foi utilizada?
-[Ex: GitHub Copilot]
-[Ex: Escrita de código e testes]
-[Ex: Utilizado para autocompletar funções repetitivas e gerar esqueletos de testes unitários.]
-[Ex: Gemini / ChatGPT]
-[Ex: Resolução de bugs e documentação]
-[Ex: Usado para entender mensagens de erro complexas do banco de dados e para ajudar a estruturar este README.]
+---
 
+## 🤖 Uso de Inteligência Artificial
 
-4. Divisão de Responsabilidades e Atuação da Equipe
-Scrum Master
-Nome: Pietra Feitoza
-Atuação e Responsabilidades:
-Mediou e organizou reuniões de alinhamento do desenvolvimento
-Acompanhou o andamento das tarefas de todos os membros
-Se responsabiliza pela entrega da documentação
-[Ex: Garantiu que as tarefas do Trello/Jira estivessem atualizadas e refletissem o progresso real.]
-Atuação dos Membros na Entrega
-Descreva o papel de cada integrante do grupo e quais foram suas entregas concretas (telas, rotas de API, documentação, banco de dados, etc.).
-Nome do Integrante
-Papel / Foco
-Entregas Realizadas
-José
-Desenvolvedor Back-end
-<ul><li>[Ex: Desenvolveu a tela de login e o dashboard.]</li><li>[Ex: Consumiu a API de listagem de produtos.]</li></ul>
-Lucas Delmiro 
-Desenvolvedor Back-end
-<ul><li>[Ex: Criou as rotas de autenticação (JWT).]</li><li>[Ex: Modelou o banco de dados.]</li></ul>
-Pablo Marchina
-Desenvolvedor  Front End 
-<ul><li>[Ex: Escreveu os testes unitários.]</li><li>[Ex: Redigiu o manual do usuário e testou as rotas no Postman.]</li></ul>
-Mariana Moussa
-Desenvolvedora Back End
+**Utilizou IA no projeto?** Sim
 
+| Ferramenta de IA | Ocasião / Finalidade             | Como foi utilizada?                                               |
+| ---------------- | -------------------------------- | ----------------------------------------------------------------- |
+| GitHub Copilot   | Escrita de código e testes       | Autocompletar funções repetitivas e gerar estruturas de testes    |
+| ChatGPT / Gemini | Resolução de bugs e documentação | Auxiliou na compreensão de erros e na organização da documentação |
 
-Vitor Tadashi
-Desenvolvedor Front End 
+---
 
+## 👥 Divisão de Responsabilidades
 
-Pietra Feitoza
-Scrum Master / Desenvolvedora  Front End
-<ul><li>[Ex: Gerenciou o kanban da equipe.]</li><li>[Ex: Auxiliou na integração entre o front-end e back-end.]</li></ul>
+### 🧭 Scrum Master
+
+**Nome:** Pietra Feitoza
+
+**Atuação e Responsabilidades:**
+
+* Mediou e organizou reuniões de alinhamento
+* Acompanhou o andamento das tarefas da equipe
+* Garantiu a atualização das tarefas no Kanban (Trello/Jira)
+* Responsável pela entrega da documentação
+* Auxiliou na integração entre front-end e back-end
+
+---
+
+## 👨‍💻 Atuação dos Membros
+
+| Nome           | Papel / Foco             | Entregas Realizadas                                             |
+| -------------- | ------------------------ | --------------------------------------------------------------- |
+| José           | Desenvolvedor Back-end   | Desenvolveu tela de login e dashboard; consumiu API de produtos |
+| Lucas Delmiro  | Desenvolvedor Back-end   | Criou rotas de autenticação (JWT); modelou o banco de dados     |
+| Pablo Marchina | Desenvolvedor Front-end  | Escreveu testes unitários; documentou e testou rotas no Postman |
+| Mariana Moussa | Desenvolvedora Back-end  | *(Adicionar entregas)*                                          |
+| Vitor Tadashi  | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
+| Pietra Feitoza | Scrum Master / Front-end | Gerenciou o Kanban; auxiliou na integração entre sistemas       |
+
+---
+
+Se quiser, posso deixar isso ainda mais profissional (com badges, sumário clicável, prints do sistema ou padrão de README de empresas).
+
 
 
