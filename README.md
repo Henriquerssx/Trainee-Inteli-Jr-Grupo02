@@ -1,25 +1,25 @@
-## Trainee Inteli JR G02
+## Trainee Inteli JR Grupo 02
 
 # 📁 Estrutura do Sistema
 
-## 📦 Organização do Projeto
+## Organização do Projeto
 
 Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arquivos) quanto logicamente (arquitetura e navegação/API).
 
 ### 🗂️ Árvore de Arquivos
 
 ```bash
-📦 nome-do-repositorio
-┣ 📂 nome-da-pasta-1        # Componentes reutilizáveis da interface
-┣ 📂 nome-da-pasta-2        # Controladores da API e regras de negócio
-┣ 📂 nome-da-pasta-3        # Configurações de banco de dados
-┣ 📜 arquivo-principal.js   # Ponto de entrada da aplicação
+📦 Trainee-Inteli-Jr-Grupo02
+┣ 📂 nome-da-pasta-1        # 
+┣ 📂 nome-da-pasta-2        # 
+┣ 📂 nome-da-pasta-3        # 
+┣ 📜 arquivo-principal.js   # 
 ┗ 📜 README.md
 ```
 
 ---
 
-## ⚙️ Decisões Técnicas
+## Decisões Técnicas
 
 | Tecnologia / Ferramenta | Finalidade no Projeto                       | Por que foi escolhida?                                                  |
 | ----------------------- | ------------------------------------------- | ----------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 ---
 
-## 🤖 Uso de Inteligência Artificial
+## Uso de Inteligência Artificial
 
 **Utilizou IA no projeto?** Sim
 
@@ -40,9 +40,9 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 ---
 
-## 👥 Divisão de Responsabilidades
+## Divisão de Responsabilidades
 
-### 🧭 Scrum Master
+### Scrum Master
 
 **Nome:** Pietra Feitoza
 
@@ -50,26 +50,22 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 * Mediou e organizou reuniões de alinhamento
 * Acompanhou o andamento das tarefas da equipe
-* Garantiu a atualização das tarefas no Kanban (Trello/Jira)
+* Garantiu a atualização das tarefas no Kanban 
 * Responsável pela entrega da documentação
-* Auxiliou na integração entre front-end e back-end
 
 ---
 
-## 👨‍💻 Atuação dos Membros
+## Atuação dos Membros
 
 | Nome           | Papel / Foco             | Entregas Realizadas                                             |
 | -------------- | ------------------------ | --------------------------------------------------------------- |
-| José           | Desenvolvedor Back-end   | Desenvolveu tela de login e dashboard; consumiu API de produtos |
-| Lucas Delmiro  | Desenvolvedor Back-end   | Criou rotas de autenticação (JWT); modelou o banco de dados     |
-| Pablo Marchina | Desenvolvedor Front-end  | Escreveu testes unitários; documentou e testou rotas no Postman |
+| José           | Desenvolvedor Back-end   | *(Adicionar entregas)*                                          |
+| Lucas Delmiro  | Desenvolvedor Back-end   | *(Adicionar entregas)*                                          |
+| Pablo Marchina | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
 | Mariana Moussa | Desenvolvedora Back-end  | *(Adicionar entregas)*                                          |
 | Vitor Tadashi  | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
-| Pietra Feitoza | Scrum Master / Front-end | Gerenciou o Kanban; auxiliou na integração entre sistemas       |
+| Pietra Feitoza | Scrum Master / Front-end | *(Adicionar entregas)*                                          |
 
----
-
-Se quiser, posso deixar isso ainda mais profissional (com badges, sumário clicável, prints do sistema ou padrão de README de empresas).
 
 
 
