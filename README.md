@@ -23,9 +23,9 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 | Tecnologia / Ferramenta | Finalidade no Projeto                       | Por que foi escolhida?                                                  |
 | ----------------------- | ------------------------------------------- | ----------------------------------------------------------------------- |
-| React.js                | Criação da interface de usuário (Front-end) | Facilidade em criar componentes reutilizáveis e familiaridade da equipe |
-| Node.js + Express       | Criação da API e back-end                   | Permite usar JavaScript em toda a stack, acelerando o desenvolvimento   |
-| PostgreSQL              | Banco de dados relacional                   | Garante integridade referencial entre tabelas                           |
+| preencher             | preencher                                   | preencher         |
+| preencher             | preencher                                 | preencher         |
+| preencher             | preencher                                 | preencher         |
 
 ---
 
@@ -35,8 +35,8 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 | Ferramenta de IA | Ocasião / Finalidade             | Como foi utilizada?                                               |
 | ---------------- | -------------------------------- | ----------------------------------------------------------------- |
-| GitHub Copilot   | Escrita de código e testes       | Autocompletar funções repetitivas e gerar estruturas de testes    |
-| ChatGPT / Gemini | Resolução de bugs e documentação | Auxiliou na compreensão de erros e na organização da documentação |
+| preencher        | preencher                        | preencher   |
+| preencher        | preencher                        | preencher   |
 
 ---
 
