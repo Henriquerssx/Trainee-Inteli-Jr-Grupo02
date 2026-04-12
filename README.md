@@ -7,7 +7,7 @@
 ### Árvore de Arquivos
 Abaixo está a representação da estrutura de diretórios do projeto:
 
-```text
+
 📦 [nome-do-repositorio]
  ┣ 📂 [nome-da-pasta-1]      # [Breve descrição do que esta pasta contém, ex: Componentes reutilizáveis da interface]
  ┣ 📂 [nome-da-pasta-2]      # [Ex: Controladores da API e regras de negócio]
