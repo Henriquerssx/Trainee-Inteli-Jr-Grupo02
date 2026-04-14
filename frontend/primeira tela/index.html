@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Barra no topo da tela -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png">
+    <span>INTELI JÚNIOR</span>
+  </div>
+
+  <nav>
+    <a href="#">RELATÓRIO</a>
+    <a href="#">ENTRAR</a>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <!-- Barra do filtro do lado da tela -->
+  <aside class="sidebar">
+    <h3>Filtros</h3>
+
+    <input type="text" id="search" placeholder="Buscar...">
+
+    <select id="status">
+      <option value="all">Todos</option>
+      <option value="andamento">Em andamento</option>
+      <option value="concluido">Concluído</option>
+    </select>
+  </aside>
+
+  <!-- Tala principal dos projetos -->
+  <main class="main">
+    <p>// visão geral</p>
+    <h1>Dashboard Central</h1>
+
+    <button id="addBtn">+ Novo Projeto</button>
+
+    <div id="cards" class="grid"></div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
