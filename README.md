@@ -57,14 +57,14 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 ## Atuação dos Membros
 
-| Nome           | Papel / Foco             | Entregas Realizadas                                             |
-| -------------- | ------------------------ | --------------------------------------------------------------- |
-| José           | Desenvolvedor Front-end   | *(Adicionar entregas)*                                          |
-| Lucas Delmiro  | Integração com IA   | *(Adicionar entregas)*                                          |
-| Pablo Marchina | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
-| Mariana Moussa | Desenvolvedora Front-end  | *(Adicionar entregas)*                                          |
-| Vitor Tadashi  | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
-| Pietra Feitoza | Scrum Master / Front-end | *(Adicionar entregas)*                                          |
+| Nome           | Papel / Foco             | Entregas Realizadas |
+| -------------- | ------------------------ | ------------------- |
+| José           | Desenvolvedor Front-end   | Responsável por testar os endpoints e repassar para a equipe, além de desenvolver o código da segunda tela. |
+| Lucas Delmiro  | Integração com IA        | Responsável por estudar e implementar a integração com IA no projeto, realizando testes iniciais e a implementando. |
+| Pablo Marchina | Desenvolvedor Front-end  | Responsável por desenvolver a programação da tela inicial do projeto, criando a base para aprimoramento. |
+| Mariana Moussa | Desenvolvedora Front-end | Responsável por iniciar a programação da segunda tela do projeto, adicionando os elementos essenciais. |
+| Vitor Tadashi  | Desenvolvedor Front-end  | Responsável por iniciar o conceito da segunda tela do projeto, propondo ideias e contribuindo para o desenvolvimento conjunto. |
+| Pietra Feitoza | Scrum Master / Front-end | Auxílio no desenvolvimento front-end, principalmente no concept inicial da primeira tela, refinamento de UX e preenchimento da documentação. |
 
 
 
