@@ -59,10 +59,10 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 | Nome           | Papel / Foco             | Entregas Realizadas                                             |
 | -------------- | ------------------------ | --------------------------------------------------------------- |
-| José           | Desenvolvedor Back-end   | *(Adicionar entregas)*                                          |
-| Lucas Delmiro  | Desenvolvedor Back-end   | *(Adicionar entregas)*                                          |
+| José           | Desenvolvedor Front-end   | *(Adicionar entregas)*                                          |
+| Lucas Delmiro  | Integração com IA   | *(Adicionar entregas)*                                          |
 | Pablo Marchina | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
-| Mariana Moussa | Desenvolvedora Back-end  | *(Adicionar entregas)*                                          |
+| Mariana Moussa | Desenvolvedora Front-end  | *(Adicionar entregas)*                                          |
 | Vitor Tadashi  | Desenvolvedor Front-end  | *(Adicionar entregas)*                                          |
 | Pietra Feitoza | Scrum Master / Front-end | *(Adicionar entregas)*                                          |
 
