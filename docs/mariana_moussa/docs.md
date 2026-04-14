@@ -1,45 +1,206 @@
-# Documentação Individual
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- cabeçalho do html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard G02 - Inteli Jr</title>
+    <!-- import do tailwind via cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- import do apexcharts via cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- configuração do tailwind para tema escuro e cores personalizadas -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                900: '#0d0d0d',
+                800: '#161616',
+                700: '#1a1a1a',
+                600: '#222222'
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#0d0d0d] text-white min-h-screen p-6">
+    <!-- conteudo principal da pagina, use esta area para montar o layout -->
+    <div class="max-w-[1600px] mx-auto space-y-6">
+      <!-- cabecalho do dashboard -->
+      <header class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 class="text-2xl font-bold">Dashboard</h1>
+          <div class="mt-3 flex flex-wrap items-center gap-3">
+            <span class="inline-flex items-center gap-2 text-sm text-gray-300">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Grupo 2 - Trainee - Inteli Jr.
+            </span>
+            <span class="bg-[#2a2a2a] text-gray-400 text-xs px-3 py-1 rounded-full">Em andamento</span>
+          </div>
+        </div>
+      </header>
 
-## Componente desenvolvido
-Dashboard de acompanhamento de projetos — visão geral de tarefas, status, prioridades, SPI e membros da equipe.
+      <!-- grade principal com 3 colunas para cards -->
+      <main class="grid grid-cols-1 xl:grid-cols-3 gap-4">
+        <!-- coluna 1: tarefas e status do projeto -->
+        <section class="space-y-4">
+          <!-- card de total de tarefas -->
+          <article class="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+            <p class="text-xs text-gray-400">Total de tarefas</p>
+            <h2 class="text-5xl font-bold mt-3">—</h2>
+            <p class="text-xs text-gray-500 mt-2">—</p>
+            <div class="grid grid-cols-3 gap-2 mt-4">
+              <div class="bg-[#222] rounded-lg p-3">
+                <p class="text-xs text-gray-400">Feitas</p>
+                <p class="text-2xl font-bold mt-2">—</p>
+              </div>
+              <div class="bg-[#222] rounded-lg p-3">
+                <p class="text-xs text-gray-400">Fazendo</p>
+                <p class="text-2xl font-bold mt-2">—</p>
+              </div>
+              <div class="bg-[#222] rounded-lg p-3">
+                <p class="text-xs text-gray-400">A Fazer</p>
+                <p class="text-2xl font-bold mt-2">—</p>
+              </div>
+            </div>
+          </article>
 
----
+          <!-- card de status do projeto -->
+          <article class="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <h2 class="font-semibold">Status do projeto</h2>
+              <span class="bg-[#2a2a2a] text-gray-400 text-xs px-2 py-1 rounded-md">—</span>
+            <h3 class="text-lg font-bold mt-2">—</h3>
+            <div class="mt-4 flex items-center justify-between text-sm text-gray-400">
+              <span>Progresso geral</span>
+              <span class="text-white">—</span>
+            </div>
+            <div class="mt-2 bg-[#333] rounded-full h-2 overflow-hidden">
+              <div class="h-full bg-red-600 w-0"></div>
+            </div>
+            <div class="mt-4 space-y-2 text-sm">
+              <div class="flex justify-between text-gray-400">
+                <span>Cliente</span>
+                <span class="text-white">—</span>
+              </div>
+              <div class="flex justify-between text-gray-400">
+                <span>Responsável</span>
+                <span class="text-white">—</span>
+              </div>
+              <div class="flex justify-between text-gray-400">
+                <span>Prazo</span>
+                <span class="text-white">—</span>
+              </div>
+              <div class="flex justify-between text-gray-400">
+                <span>Prioridade</span>
+                <span class="text-white">—</span>
+              </div>
+            </div>
+          </article>
+        </section>
 
-## Wireframe
-Elaborei um wireframe inicial no Figma para estruturar o layout do dashboard antes de partir para o código:
+        <!-- coluna 2: area de gráficos e prioridade -->
+        <section class="space-y-4">
+          <!-- box vazia para distribuição de tarefas, fácil de substituir por gráfico ou tabela -->
+          <article class="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+            <p class="text-sm text-gray-400">Distribuição de tarefas</p>
+            <div class="h-[180px] mt-4 rounded-xl border border-dashed border-white/10"></div>
+          </article>
 
-Durante o processo, percebi que o wireframe que eu tinha desenhado não traduzia tão bem a experiência que eu queria passar — o visual ficou confuso e a distribuição dos cards não estava clara o suficiente. Em paralelo, o Vitor havia desenvolvido um wireframe com uma abordagem mais limpa e bem resolvida, então o grupo decidiu em conjunto adotar a referência dele como base para a entrega em grupo.
+          <!-- card de tarefas por prioridade, altere textos e barras conforme precisar -->
+          <article class="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+            <p class="text-sm text-gray-400">Tarefas por prioridade</p>
+            <div class="grid grid-cols-2 gap-3 mb-4 mt-4">
+              <div class="bg-[#222] rounded-lg p-3">
+                <p class="text-sm text-gray-400">Atrasadas</p>
+                <p class="text-3xl font-bold text-white mt-2">—</p>
+                <p class="text-xs text-gray-400 mt-1">—</p>
+              </div>
+              <div class="bg-[#222] rounded-lg p-3">
+                <p class="text-sm text-gray-400">Alta prioridade</p>
+                <p class="text-3xl font-bold text-white mt-2">—</p>
+                <p class="text-xs text-gray-400 mt-1">—</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-sm text-gray-400 mb-2">
+                  <span>Alta</span>
+                  <span class="text-white">—</span>
+                </div>
+                <div class="bg-[#333] rounded-full h-1.5 overflow-hidden">
+                  <div class="h-full bg-gray-500 w-0"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm text-gray-400 mb-2">
+                  <span>Média</span>
+                  <span class="text-white">—</span>
+                </div>
+                <div class="bg-[#333] rounded-full h-1.5 overflow-hidden">
+                  <div class="h-full bg-gray-500 w-0"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm text-gray-400 mb-2">
+                  <span>Baixa</span>
+                  <span class="text-white">—</span>
+                </div>
+                <div class="bg-[#333] rounded-full h-1.5 overflow-hidden">
+                  <div class="h-full bg-gray-500 w-0"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
 
----
+        <!-- coluna 3: spi e membros da equipe -->
+        <section class="space-y-4">
+          <!-- painel vazio de spi, ideal para adicionar gráfico ou dados depois -->
+          <article class="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+            <p class="text-sm text-gray-400">Índice de Desempenho de Prazo (SPI)</p>
+            <div class="h-[180px] mt-4 rounded-xl border border-dashed border-white/10"></div>
+          </article>
 
-## Processo de desenvolvimento
+          <!-- card de membros da equipe, mantenha a estrutura e substitua nomes/valores -->
+          <article class="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+            <p class="text-sm text-gray-400">Membros da equipe</p>
+            <div class="mt-4 space-y-2">
+              <div class="flex justify-between items-center rounded-lg bg-[#222] px-3 py-2">
+                <p class="font-medium">Integrante 1</p>
+                <p class="text-sm text-gray-200">—</p>
+              </div>
+              <div class="flex justify-between items-center rounded-lg bg-[#222] px-3 py-2">
+                <p>Integrante 2</p>
+                <p class="text-sm text-gray-200">—</p>
+              </div>
+              <div class="flex justify-between items-center rounded-lg bg-[#222] px-3 py-2">
+                <p>Integrante 3</p>
+                <p class="text-sm text-gray-200">—</p>
+              </div>
+              <div class="flex justify-between items-center rounded-lg bg-[#222] px-3 py-2">
+                <p>Integrante 4</p>
+                <p class="text-sm text-gray-200">—</p>
+              </div>
+              <div class="flex justify-between items-center rounded-lg bg-[#222] px-3 py-2">
+                <p>Integrante 5</p>
+                <p class="text-sm text-gray-200">—</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
 
-Com o wireframe do Vitor como referência, comecei a transformar estrutura em código HTML. A ideia era já construir o componente individual de forma que ele pudesse ser diretamente aproveitado na entrega em grupo.
-
-Durante o desenvolvimento, usei o Claude pontualmente como apoio técnico: para entender quais bibliotecas fariam mais sentido para o tipo de interface proposta, chegando ao Tailwind CSS pela praticidade e ao ApexCharts para os gráficos. Também usei para tirar dúvidas enquanto montava os cards, como ajustar espaçamentos, entender classes do Tailwind e organizar o grid de três colunas.
-
-A estrutura e as decisões de layout já tinham uma base definida antes, a IA funcionou mais como suporte técnico do que como guia criativo.
-
----
-
-## Relação com a entrega em grupo
-
-O componente desenvolvido aqui é a base direta do que o grupo irá utilizar. O arquivo `index.html` já está estruturado com os espaços reservados para integração com a API, comentários indicando cada seção e as bibliotecas. A ideia é que a entrega em grupo parta exatamente deste código, adicionando as demais telas, a navegação e o consumo real dos dados.
-
----
-
-## Ferramentas de IA utilizadas
-- Claude (Anthropic) — usada como suporte técnico para dúvidas sobre Tailwind, escolha de bibliotecas e ajustes de estrutura HTML.
----
-
-## Decisões técnicas
-- **Tailwind CSS via CDN** — escolhido pela agilidade no desenvolvimento, sem necessidade de instalação ou build
-- **ApexCharts via CDN** — escolhido pela facilidade de integração com JavaScript puro e boa compatibilidade com tema escuro
-- Arquivo único `index.html` para simplicidade na entrega individual, com espaços reservados para futura integração com a API
-
----
-
-## Dependências do componente
-Para funcionar de forma completa na entrega em grupo, o componente depende de:
-- Dados da API: total de tarefas, distribuição por status, prioridades, SPI e lista de membros
-- Integração via `fetch()` nos pontos marcados com `—` no HTML
+    <script>
+      // aqui fica o javascript opcional para inicializar gráficos ou adicionar comportamento
+      document.addEventListener('DOMContentLoaded', function () {
+        // espaço para futuras alterações de gráficos e conteúdo
+      });
+    </script>
+  </body>
+</html>
