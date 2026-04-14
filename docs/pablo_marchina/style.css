@@ -1,0 +1,135 @@
+/* Config da tela geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fragment Mono", monospace;
+}
+
+body {
+  background: #0b0b0b;
+  color: #e5e5e5;
+}
+
+/* Barra no topo */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+/* container da logo */
+.logo {
+  display: flex;
+  align-items: center; 
+  gap: 8px;
+}
+
+/* imagem da logo */
+.logo img {
+  width: 26px;     
+  height: auto;
+
+  position: relative;
+}
+
+.navbar a {
+  color: #777;
+  margin-left: 16px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.layout {
+  display: flex;
+}
+
+/* Barra lateral do filtro */
+.sidebar {
+  width: 200px;
+  padding: 20px;
+}
+
+
+.sidebar h3 {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 7px;
+  background: transparent;
+  border: 1px solid #222;
+  color: #ccc;
+  font-size: 12px;
+}
+
+/* Tela principal dos projetos */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+.main p {
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+button {
+  margin-bottom: 20px;
+  padding: 7px 12px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover {
+  color: white;
+  border-color: #555;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  padding: 14px;
+  border-radius: 8px;
+  background: #111;
+}
+
+.card h4 {
+  font-size: 13px;
+  font-weight: normal;
+  color: #ddd;
+}
+
+.card p {
+  font-size: 11px;
+  color: #666;
+  margin: 6px 0 10px;
+}
+
+.status {
+  font-size: 10px;
+  color: #777;
+}
