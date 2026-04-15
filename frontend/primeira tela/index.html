@@ -12,40 +12,43 @@
 <!-- Barra no topo da tela -->
 <header class="navbar">
   <div class="logo">
-    <img src="logo.png">
-    <span>INTELI JÚNIOR</span>
+    <img src="logo-vermelha.png">
+
+    <div class="texto-logo">
+    <span>INTELI</span>
+    <span>JÚNIOR</span>
   </div>
+</div>
 
   <nav>
     <a href="#">RELATÓRIO</a>
+    <span class="separador">|</span>
     <a href="#">ENTRAR</a>
   </nav>
 </header>
 
 <div class="layout">
-
-  <!-- Barra do filtro do lado da tela -->
-  <aside class="sidebar">
-    <h3>Filtros</h3>
-
-    <input type="text" id="search" placeholder="Buscar...">
-
-    <select id="status">
-      <option value="all">Todos</option>
-      <option value="andamento">Em andamento</option>
-      <option value="concluido">Concluído</option>
-    </select>
-  </aside>
-
-  <!-- Tala principal dos projetos -->
   <main class="main">
     <p>// visão geral</p>
-    <h1>Dashboard Central</h1>
+    
+    <div class="dashboard-header">
+      <h1>Dashboard Central</h1>
+
+      <div class="filtros-topo">
+        <input type="text" id="search" placeholder="Buscar...">
+        <select id="status">
+          <option value="all">Todos</option>
+          <option value="em andamento">Em andamento</option>
+          <option value="concluido">Concluído</option>
+        </select>
+      </div>
+    </div>
 
     <button id="addBtn">+ Novo Projeto</button>
 
     <div id="cards" class="grid"></div>
   </main>
+</div>
 
 </div>
 
