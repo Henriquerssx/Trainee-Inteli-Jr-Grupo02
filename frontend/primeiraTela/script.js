@@ -34,8 +34,8 @@ async function carregarProjetos() {
       if (statusFormatado.includes("concluíd")) {
         statusFormatado = "concluido";
       }
-      // Deixa a descrição para a proxima pagina com a visao geral do projeto clicado
       return {
+        id: p.id,
         nome: p.name || "Sem nome",
         status: statusFormatado, 
         descricao: p.client ? `Cliente: ${p.client}` : "Sem descrição"
@@ -59,7 +59,8 @@ function renderizar(lista) {
   lista.forEach((p) => {
     const card = document.createElement("div");
     card.className = "card";
-
+    card.style.cursor = "pointer"; 
+    card.onclick = () => { window.location.href = `dashboard.html?id=${p.id}`; };
     card.innerHTML = `
         <div class="card-topo">
             <h4>${p.nome}</h4>
