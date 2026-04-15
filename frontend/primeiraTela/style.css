@@ -120,6 +120,11 @@ nav {
   border-radius: 4px;
 }
 
+.filtros-topo select option {
+  background-color: #0c0808; /* Um preto com um fundo beeeeem levemente avermelhado/quente */
+  color: #e5e5e5; /* A mesma cor de texto que você usou no body */
+  font-family: "Fragment Mono", monospace; /* Garante que a fonte continue a mesma do seu site */
+}
 .filtros-topo input:focus,
 .filtros-topo select:focus {
   outline: none;
@@ -197,7 +202,7 @@ button:hover {
 
 .card h4 {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   color: #b12b2b;
 }
 
