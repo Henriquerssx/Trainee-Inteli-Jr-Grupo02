@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainee — Entrega Individual</title>
+  <link rel="stylesheet" href="/docs/jose/style.css" />
+</head>
+<body>
+
+  <div class="painelPrincipal">
+    <aside class="barreLateral">
+      <div class="logoTopo">
+        <span class="logoNome">Trainee</span>
+        <span class="logoAba">Projetos</span>
+      </div>
+      <nav class="navLateral">
+        <div class="itemNavAtivo">
+          <svg class="iconeNav" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </div>
+      </nav>
+
+      <button class="botaoNovoProjeto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Novo Projeto
+      </button>
+
+    </aside>
+
+    <main class="areaPrincipal">
+
+      <header class="barraSuperior">
+        <div class="campoBusca">
+          <svg class="iconeBusca" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            class="inputBusca"
+            type="text"
+            placeholder="Filtrar por nome de projeto, tech stack ou time..."
+          />
+        </div>
+
+        <div class="grupoFiltros">
+          <span class="tagFiltro">Java <span class="tagFechar">✕</span></span>
+          <span class="tagFiltro">Spring Boot <span class="tagFechar">✕</span></span>
+          <span class="botaoAdicionarFiltro">+ Adicionar Filtro</span>
+        </div>
+
+      </header>
+
+      <section class="conteudoPagina">
+
+        <h1 class="tituloPagina">Visão Geral</h1>
+        <p class="subtituloPagina">Busca personalizada</p>
+
+        <div class="gradeEstatisticas">
+
+          <div class="cartaoEstatistica">
+            <div class="iconeCartao">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e63" stroke-width="2.5">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <span class="deltaPositivo">+12%</span>
+            <div class="numeroEstatistica">24</div>
+            <div class="rotuloEstatistica">Projetos com Java</div>
+            <div class="barraDestaque"></div>
+          </div>
+
+          <div class="cartaoEstatistica">
+            <div class="iconeCartao iconeCartaoRaio">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <span class="deltaNegativo">-5%</span>
+            <div class="numeroEstatistica">18</div>
+            <div class="rotuloEstatistica">Spring Boot</div>
+            <div class="barraDestaque"></div>
+          </div>
+
+          <div class="cartaoEstatistica cartaoVermelho">
+            <div class="rotuloTotalProjetos">TOTAL DE PROJETOS</div>
+            <div class="numeroTotalProjetos">50</div>
+          </div>
+
+        </div>
+
+        <div class="linhaInferior">
+
+          <div class="cartaoGrafico">
+            <div class="cabecalhoGrafico">
+              <span class="tituloGrafico">Atividade de Projetos</span>
+              <div class="grupoAlternar">
+                <button class="botaoAlternar botaoAlternarAtivo">Semanal</button>
+                <button class="botaoAlternar">Mensal</button>
+              </div>
+            </div>
+
+            <div class="areaGrafico">
+              <div class="colunaGrafico"><div class="barra" style="height:45%"></div><span class="rotuloData">01 MAI</span></div>
+              <div class="colunaGrafico"><div class="barra" style="height:35%"></div><span class="rotuloData">0io MAI</span></div>
+              <div class="colunaGrafico"><div class="barra barraDestacada" style="height:90%"></div><span class="rotuloData">10 MAI</span></div>
+              <div class="colunaGrafico"><div class="barra" style="height:60%"></div><span class="rotuloData">1io MAI</span></div>
+              <div class="colunaGrafico"><div class="barra" style="height:50%"></div><span class="rotuloData">20 MAI</span></div>
+              <div class="colunaGrafico"><div class="barra" style="height:40%"></div><span class="rotuloData"></span></div>
+              <div class="colunaGrafico"><div class="barra" style="height:55%"></div><span class="rotuloData"></span></div>
+            </div>
+          </div>
+
+          <div class="cartaoProjetosRecentes">
+            <div class="cabecalhoRecentes">
+              <span class="tituloRecentes">Projetos Recentes</span>
+              <span class="linkVerTudo">Ver tudo</span>
+            </div>
+
+            <div class="itemProjeto">
+              <div class="topoItemProjeto">
+                <div class="avatarProjeto">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e63" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                  </svg>
+                </div>
+                <span class="badgeAtivo">ATIVO</span>
+              </div>
+              <div class="nomeProjeto">Sistema de contabilidade</div>
+              <div class="descricaoProjeto">Core em Java.</div>
+              <div class="membrosProjeto">
+                <div class="avatarMembro">R</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="rodapePainel">
+        <button class="botaoSecundario">Documentação</button>
+        <button class="botaoPrimario">Deploy do projeto</button>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>

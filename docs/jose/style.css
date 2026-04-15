@@ -1,4 +1,505 @@
-/* Arquivo CSS de exemplo para jose */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.painelPrincipal {
+  display: flex;
+  height: 100vh;
+  background: #111111;
+  overflow: hidden;
+}
+
+.barreLateral {
+  width: 175px;
+  background: #111111;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #1e1e1e;
+  flex-shrink: 0;
+}
+
+.logoTopo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.logoNome {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logoAba {
+  font-size: 11px;
+  color: #e63322;
+  border-bottom: 1.5px solid #e63322;
+  padding-bottom: 1px;
+}
+
+.navLateral {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.itemNavAtivo {
+  background: #e63322;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.iconeNav {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.botaoNovoProjeto {
+  margin-top: auto;
+  background: #e63322;
+  border: none;
+  border-radius: 24px;
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botaoNovoProjeto:hover {
+  background: #cc2a1b;
+}
+
+.areaPrincipal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.barraSuperior {
+  padding: 14px 20px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #1e1e1e;
+  flex-shrink: 0;
+}
+
+.campoBusca {
+  flex: 1;
+  position: relative;
+}
+
+.iconeBusca {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.inputBusca {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 8px 12px 8px 32px;
+  color: #888888;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inputBusca:focus {
+  border-color: #444444;
+  color: #cccccc;
+}
+
+.grupoFiltros {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tagFiltro {
+  background: #1e1e1e;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #cccccc;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tagFechar {
+  color: #888888;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.botaoAdicionarFiltro {
+  background: transparent;
+  border: 1px dashed #333333;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #888888;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.botaoAdicionarFiltro:hover {
+  border-color: #e63322;
+  color: #e63322;
+}
+
+.conteudoPagina {
+  padding: 24px 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tituloPagina {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subtituloPagina {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.gradeEstatisticas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cartaoEstatistica {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cartaoVermelho {
+  background: #c0291a;
+  background-image: radial-gradient(circle at 80% 50%, #e0351f 0%, #a0201a 60%);
+}
+
+.iconeCartao {
+  width: 28px;
+  height: 28px;
+  background: #222222;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.iconeCartaoRaio {
+  background: #222222;
+}
+
+.deltaPositivo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.deltaNegativo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff4444;
+}
+
+.numeroEstatistica {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.rotuloEstatistica {
+  font-size: 11px;
+  color: #888888;
+  margin-top: 4px;
+}
+
+.barraDestaque {
+  height: 2px;
+  background: #e63322;
+  border-radius: 2px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.rotuloTotalProjetos {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+}
+
+.numeroTotalProjetos {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.linhaInferior {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 14px;
+}
+
+.cartaoGrafico {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.cabecalhoGrafico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.tituloGrafico {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.grupoAlternar {
+  display: flex;
+  gap: 4px;
+}
+
+.botaoAlternar {
+  background: transparent;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #888888;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.botaoAlternarAtivo {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.areaGrafico {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 120px;
+  padding-bottom: 4px;
+}
+
+.colunaGrafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 4px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.barra {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  background: #2d2d2d;
+  min-height: 8px;
+  transition: background 0.2s;
+}
+
+.barraDestacada {
+  background: #e63322;
+}
+
+.rotuloData {
+  font-size: 9px;
+  color: #555555;
+  white-space: nowrap;
+}
+
+.cartaoProjetosRecentes {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.cabecalhoRecentes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.tituloRecentes {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.linkVerTudo {
+  font-size: 11px;
+  color: #e63322;
+  cursor: pointer;
+}
+
+.linkVerTudo:hover {
+  text-decoration: underline;
+}
+
+.itemProjeto {
+  background: #141414;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.topoItemProjeto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.avatarProjeto {
+  width: 30px;
+  height: 30px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeAtivo {
+  background: rgba(76, 175, 80, 0.15);
+  border: 1px solid #4caf50;
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-size: 10px;
+  color: #4caf50;
+}
+
+.nomeProjeto {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.descricaoProjeto {
+  font-size: 11px;
+  color: #666666;
+}
+
+.membrosProjeto {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.avatarMembro {
+  width: 22px;
+  height: 22px;
+  background: #c0291a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.rodapePainel {
+  padding: 14px 20px;
+  border-top: 1px solid #1e1e1e;
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.botaoSecundario {
+  background: #1e1e1e;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botaoSecundario:hover {
+  background: #2a2a2a;
+}
+
+.botaoPrimario {
+  background: #e63322;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.botaoPrimario:hover {
+  background: #cc2a1b;
 }
