@@ -80,6 +80,7 @@ function renderizar(lista) {
     cards.appendChild(card);
   });
 
+  // adicionar a preview
   document.querySelectorAll(".preview-input").forEach(input => {
     input.onchange = function () {
 

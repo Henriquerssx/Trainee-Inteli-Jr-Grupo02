@@ -383,13 +383,14 @@
       let chatAberto = false;
 
       document.addEventListener("keydown", (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "d") {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "d") { // se quiser trocar as teclas pra abrir
         e.preventDefault();
         toggleAI();
         }
       });
 
-      function toggleAI() {
+      // Função do overlay
+      function toggleChat() {
         chatAberto = !chatAberto;
         const overlay = document.getElementById("-overlay");
 
