@@ -223,15 +223,21 @@ button:hover {
 
 .preview-box {
   position: relative;
-  height: 140px;
-  margin-top: 12px;
-  border: 1px dashed #333;
-  border-radius: 8px;
+  height: 70px; /* menor */
+
+  width: 60%;
+  margin: 12px auto; /* centraliza */
+
+
+  border-radius: 12px; /* mais arredondado */
   overflow: hidden;
-  background: #101010;
+
+  background: #101010; /* fundo acompanha */
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: #666;
   font-size: 11px;
 }
@@ -240,6 +246,8 @@ button:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  border-radius: 12px; /* arredondar imagem */
 }
 
 .preview-input {
