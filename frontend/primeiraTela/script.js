@@ -34,11 +34,13 @@ async function carregarProjetos() {
       if (statusFormatado.includes("concluíd")) {
         statusFormatado = "concluido";
       }
+
       return {
         id: p.id,
         nome: p.name || "Sem nome",
-        status: statusFormatado, 
-        descricao: p.client ? `Cliente: ${p.client}` : "Sem descrição"
+        status: statusFormatado,
+        descricao: p.client ? `Cliente: ${p.client}` : "Sem descrição",
+        preview: localStorage.getItem(`preview-${p.id}`) || ""
       };
     });
 
@@ -52,25 +54,61 @@ async function carregarProjetos() {
 }
 
 function renderizar(lista) {
-  // Limpa a tela
   cards.innerHTML = "";
 
-  // Para cada projeto,formata para o card
   lista.forEach((p) => {
     const card = document.createElement("div");
     card.className = "card";
     card.style.cursor = "pointer"; 
     card.onclick = () => { window.location.href = `dashboard.html?id=${p.id}`; };
+
     card.innerHTML = `
-        <div class="card-topo">
-            <h4>${p.nome}</h4>
-            <h5>${p.descricao}</h5>
-        </div>
-        <p class="id">${p.status}</p>
+    <div class="card-topo">
+      <h4>${p.nome}</h4>
+      <h5>${p.descricao}</h5>
+    </div>
+
+    <div class="preview-box" onclick="event.stopPropagation()">
+      <img class="preview-img" src="${p.preview}" style="display:${p.preview ? 'block' : 'none'};">
+      <span style="${p.preview ? 'display:none;' : ''}">Clique para adicionar preview</span>
+      <input type="file" class="preview-input" accept="image/*" data-id="${p.id}">
+    </div>
+
+    <p class="id">${p.status}</p>
     `;
+
     cards.appendChild(card);
   });
+
+  document.querySelectorAll(".preview-input").forEach(input => {
+    input.onchange = function () {
+
+      const file = this.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+
+        const box = this.parentElement;
+        const img = box.querySelector(".preview-img");
+        const text = box.querySelector("span");
+
+        if (text) text.style.display = "none";
+
+        img.src = e.target.result;
+        img.style.display = "block";
+
+        // salva no localStorage
+        const id = this.dataset.id;
+        localStorage.setItem(`preview-${id}`, e.target.result);
+      };
+
+      reader.readAsDataURL(file);
+    };
+  });
 }
+
 // A função filtra a lista completa de projetos
 function filtrar() {
   const texto = search.value.toLowerCase();

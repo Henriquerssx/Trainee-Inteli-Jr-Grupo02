@@ -218,3 +218,31 @@ button:hover {
   color: #9f979777;
   margin: 6px 0 10px;
 }
+
+.preview-box {
+  position: relative;
+  height: 110px;
+  margin-top: 12px;
+  border: 1px dashed #333;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 11px;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
