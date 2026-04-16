@@ -171,9 +171,11 @@ button:hover {
 }
 
 .card {
-  padding: 15px;
-  height: 200px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #121212;
+
+  height: auto;
 
   display: flex;
   flex-direction: column;
@@ -221,7 +223,7 @@ button:hover {
 
 .preview-box {
   position: relative;
-  height: 110px;
+  height: 140px;
   margin-top: 12px;
   border: 1px dashed #333;
   border-radius: 8px;
