@@ -60,7 +60,7 @@ function renderizar(lista) {
     const card = document.createElement("div");
     card.className = "card";
     card.style.cursor = "pointer"; 
-    card.onclick = () => { window.location.href = `dashboard.html?id=${p.id}`; };
+    card.onclick = () => { window.location.href = `../segundaTela/dashboard.html?id=${p.id}`; };
 
     card.innerHTML = `
     <div class="card-topo">
@@ -123,17 +123,9 @@ function filtrar() {
 
   renderizar(listaFiltrada);
 }
-// Eventos para os filtros e botão de adicionar
-btn.onclick = () => {
-  const nome = prompt("Nome do projeto:");
-  const statusNovo = prompt("Status (em andamento/concluido):");
-
-  if (nome && statusNovo) {
-    // Adiciona o novo projeto à lista 
-    projetos.push({ nome, status: statusNovo.toLowerCase(), descricao: "Adicionado manualmente" });
-    filtrar();
-  }
-};
+// O botão de novo projeto foi removido pois a API não suporta criação de projetos
+// Manter apenas os filtros funcionais
+btn.style.display = "none";
 search.oninput = filtrar;
 filtroStatus.onchange = filtrar;
 

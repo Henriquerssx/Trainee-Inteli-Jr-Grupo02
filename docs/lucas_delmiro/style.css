@@ -1,4 +1,93 @@
-/* Arquivo CSS de exemplo para lucas_delmiro */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #07090f;
+  color: #f2f4f7;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.ai-panel {
+  width: min(720px, 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(120, 15, 15, 0.14), rgba(10, 10, 18, 0.96));
+}
+
+.label {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #7f8896;
+}
+
+.ai-panel h1 {
+  margin: 8px 0;
+  font-size: 26px;
+}
+
+.description {
+  margin: 0;
+  color: #b8c0cc;
+  line-height: 1.5;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.chips span {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 6px 11px;
+  font-size: 12px;
+  color: #d7d7d7;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.btn {
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  border-radius: 10px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.18);
+}
+
+.btn:hover {
+  background: #b91c1c;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 22px rgba(220, 38, 38, 0.28);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.output {
+  margin-top: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 14px;
+  color: #d9dee6;
+  min-height: 80px;
 }
