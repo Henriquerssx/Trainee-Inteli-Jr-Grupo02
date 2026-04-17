@@ -9,21 +9,21 @@ Desenvolvido como parte do programa Trainee da Inteli JR, o Gerenciador de Proje
 * Navegação entre tela inicial (vitrine de projetos) e dashboard específico.
 * Filtragem de visualização de projetos prontos, em desenvolvimento e em revisão.
   
-# 📁 Estrutura do Sistema
+# Estrutura do Sistema
 
 ## Organização do Projeto
 
 Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arquivos) quanto logicamente (arquitetura e navegação/API).
 
-### 🗂️ Árvore de Arquivos
+### Árvore de Arquivos
 
 ```bash
-📦 Trainee-Inteli-Jr-Grupo02
-┣ 📂 nome-da-pasta-1        # 
-┣ 📂 nome-da-pasta-2        # 
-┣ 📂 nome-da-pasta-3        # 
-┣ 📜 arquivo-principal.js   # 
-┗ 📜 README.md
+Trainee-Inteli-Jr-Grupo02
+┣ nome-da-pasta-1        # 
+┣ nome-da-pasta-2        # 
+┣ nome-da-pasta-3        # 
+┣ arquivo-principal.js   # 
+┗ README.md
 ```
 
 ---
