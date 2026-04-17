@@ -23,7 +23,7 @@ O wireframe inicial mostra um dashboard escuro com:
 
 Durante o processo, percebi que esse wireframe não traduzia tão bem a experiência que eu queria passar — o visual ficou confuso e a distribuição dos cards não estava clara o suficiente. Em paralelo, o Vitor havia desenvolvido um wireframe com uma abordagem mais limpa e bem resolvida, então o grupo decidiu em conjunto adotar a referência dele como base para a entrega em grupo. O wireframe acima é de minha autoria; a adoção do do Vitor foi uma decisão coletiva tomada ao longo do processo.
 
-A versão atual em seguida representa o componente já implementado em `index.html`, seguindo a versão melhorada do Vitor (feita no Figma) e mantendo a estrutura de dashboard com `Tailwind CSS` e espaço para `ApexCharts` nos gráficos, com cards de tarefas, status, SPI e equipe.
+A versão atual é o compenente que desenvolvi já implementado em `dashboard.html`, seguindo a versão melhorada do Vitor (feita no Figma) e mantendo a estrutura de dashboard com `Tailwind CSS` e espaço para `ApexCharts` nos gráficos, com cards de tarefas, status, SPI e equipe.
 
 ![Imagem final](imagemfinal.png)
 
