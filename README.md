@@ -5,9 +5,9 @@
 Desenvolvido como parte do programa Trainee da Inteli JR, o Gerenciador de Projetos é uma plataforma focada em organização e produtividade. Nosso principal objetivo é facilitar o acompanhamento diário das atividades da IJ por meio de um dashboard completo, oferecendo uma visão clara, centralizada e visual do andamento das tarefas.
 
 **Principais Funcionalidades:**
-* Relatório de IA.
-* Navegação entre tela inicial (vitrine de projetos) e dashboard específico.
-* Filtragem de visualização de projetos prontos, em desenvolvimento e em revisão.
+* **Relatório de IA:** Geração de relatórios inteligentes com métricas de avanços, identificação de gargalos enfrentados e um resumo executivo do projeto.
+* **Navegação Dinâmica:** Transição fluida entre a tela inicial (vitrine de projetos) e o dashboard específico de cada atividade.
+* **Sistema de Filtros:** Filtragem eficiente para visualização segmentada de projetos (prontos, em desenvolvimento e em revisão).
   
 # Estrutura do Sistema
 
