@@ -32,9 +32,11 @@ Trainee-Inteli-Jr-Grupo02
 
 | Tecnologia / Ferramenta | Finalidade no Projeto                       | Por que foi escolhida?                                                  |
 | ----------------------- | ------------------------------------------- | ----------------------------------------------------------------------- |
-| preencher             | preencher                                   | preencher         |
-| preencher             | preencher                                 | preencher         |
-| preencher             | preencher                                 | preencher         |
+| Tailwind CSS (via CDN) | Estilização rápida e responsiva do dashboard secundário | Permite criar a interface do dashboard com utilitários prontos sem precisar de configuração de build. |
+| HTML5 + CSS customizado | Estrutura e identidade visual da tela inicial | Garante controle total sobre o layout e o visual da página inicial sem uso de frameworks CSS. |
+| JavaScript vanilla + Fetch API | Listar e filtrar projetos dinamicamente | Mantém a aplicação leve e facilita o consumo da API com lógica simples de navegação e filtro. |
+| LocalStorage | Salvar previews de imagens de projetos no browser | Permite persistir imagens de visualização entre sessões sem precisar de backend adicional. |
+| Groq / OpenAI style API | Gerar resumo executivo em linguagem natural | Oferece análise de IA integrada ao dashboard usando chamadas HTTP simples e chave local de configuração. |
 
 ---
 
