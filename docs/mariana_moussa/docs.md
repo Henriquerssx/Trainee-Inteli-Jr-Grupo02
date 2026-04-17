@@ -7,28 +7,29 @@ Dashboard de acompanhamento de projetos — permite visualizar o progresso geral
 
 ## Wireframe
 
-Elaborei um wireframe inicial no Figma para estruturar o layout do dashboard antes de partir para o código:
+Antes de escrever qualquer linha de código, elaborei um wireframe no Figma para estruturar o layout do dashboard e definir quais informações deveriam estar presentes e como se relacionariam visualmente:
 
 ![Wireframe inicial](image.png)
 
-O wireframe inicial mostra um dashboard escuro com:
+O wireframe desenvolvido contempla:
 - cabeçalho com o título "Dashboard", um indicador de status geral e a identificação do projeto;
 - painel de tarefas com total e tarefas concluídas;
-- bloco de status com espaço para indicadores visuais e progressão;
-- caixas de Cliente, Prioridade e Prazo;
+- bloco de status com espaço para indicadores visuais e barra de progressão;
+- caixas dedicadas para Cliente, Prioridade e Prazo;
 - área de distribuição de tarefas com métricas de Feitas, Fazendo e A Fazer;
 - painel de Equipe com lista de membros;
 - indicador de progresso e bloco de informações adicionais;
-- barra de "Última atualização" na base.
+- barra de "Última atualização" na base da tela.
 
-Durante o processo, percebi que esse wireframe não traduzia tão bem a experiência que eu queria passar — o visual ficou confuso e a distribuição dos cards não estava clara o suficiente. Em paralelo, o Vitor havia desenvolvido um wireframe com uma abordagem mais limpa e bem resolvida, então o grupo decidiu em conjunto adotar a referência dele como base para a entrega em grupo. O wireframe acima é de minha autoria; a adoção do do Vitor foi uma decisão coletiva tomada ao longo do processo.
+Esse wireframe foi elaborado de forma independente antes de qualquer referência externa, e representa as decisões iniciais sobre hierarquia de informação, agrupamento de cards e fluxo de leitura da tela.
 
-A versão atual é o compenente que desenvolvi já implementado em `dashboard.html`, seguindo a versão melhorada do Vitor (feita no Figma) e mantendo a estrutura de dashboard com `Tailwind CSS` e espaço para `ApexCharts` nos gráficos, com cards de tarefas, status, SPI e equipe.
+Durante o processo, ao comparar minha proposta com o wireframe desenvolvido pelo Vitor — que apresentava uma distribuição de cards mais clara e uma hierarquia visual mais bem resolvida — tomei uma decisão estratégica: em vez de implementar o meu wireframe do zero, optei por usar o dele como referência visual para a implementação em HTML. Entendi que a entrega individual seria mais valiosa se o código produzido pudesse ser aproveitado diretamente na entrega em grupo, sem necessidade de refatoração. A prioridade foi a produtividade coletiva.
+
 
 ![Imagem final](imagemfinal.png)
 
 A versão implementada mantém o tema escuro e organiza os cards em um grid de três colunas, com os seguintes componentes:
-- cabeçalho com o título "Dashboard", identificação do projeto (Grupo 2 – Trainee – Inteli Jr.) e badge de status "Em andamento";
+- cabeçalho com o título do projeto, identificação do grupo (Grupo 2 – Trainee – Inteli Jr.) e badge de status;
 - card de Total de tarefas com subcards para Feitas, Fazendo e A Fazer, cada um com seu contador;
 - card de Distribuição de tarefas com área reservada para gráfico (ApexCharts);
 - card de Índice de Desempenho de Prazo (SPI) com área reservada para gráfico;
@@ -40,30 +41,32 @@ A versão implementada mantém o tema escuro e organiza os cards em um grid de t
 
 ## Processo de desenvolvimento
 
-Com o wireframe do Vitor como referência, comecei a transformar essa estrutura em código HTML. A ideia era já construir o componente individual de forma que ele pudesse ser diretamente aproveitado na entrega em grupo.
+Com a referência visual definida, assumi integralmente a responsabilidade pela implementação: estruturei o HTML, defini a hierarquia dos elementos, escolhi as bibliotecas, organizei o grid de três colunas e tomei todas as decisões de código de forma independente.
 
-Durante o desenvolvimento, usei o Claude pontualmente como apoio técnico: para entender quais bibliotecas fariam mais sentido para o tipo de interface proposta, chegando ao Tailwind CSS pela praticidade e ao ApexCharts para os gráficos. Também usei para tirar dúvidas enquanto montava os cards, como ajustar espaçamentos, entender classes do Tailwind e organizar o grid de três colunas.
+Durante a execução, usei o Claude pontualmente como apoio técnico — para entender quais bibliotecas fariam mais sentido para o tipo de interface proposta (chegando ao Tailwind CSS pela agilidade e ao ApexCharts pela compatibilidade com tema escuro), e para tirar dúvidas pontuais enquanto montava os cards, como ajustar espaçamentos e entender classes específicas do Tailwind.
 
-A estrutura e as decisões de layout já tinham uma base definida antes — a IA funcionou mais como suporte técnico do que como guia criativo.
+A IA funcionou como suporte técnico, não como guia criativo. As decisões de estrutura, organização e hierarquia de conteúdo foram feitas de forma independente.
 
 ---
 
 ## Relação com a entrega em grupo
 
-O componente desenvolvido aqui serviu como base para a segunda tela do projeto. O arquivo `index.html` está estruturado com espaços reservados para integração com a API, comentários indicando cada seção e as bibliotecas, de modo que essa base possa ser aproveitada no fluxo coletivo do projeto.
+A decisão de implementar com base no wireframe do Vitor foi intencional e orientada à entrega em grupo: o objetivo era que o código produzido individualmente pudesse ser aproveitado diretamente como base do dashboard da tela do projeto, sem necessidade de refatoração.
+
+O arquivo `index.html` foi estruturado pensando nisso — com espaços reservados para integração com a API, comentários indicando cada seção e as bibliotecas já importadas, de modo que a base pudesse ser aproveitada no fluxo coletivo com o mínimo de atrito.
 
 ---
 
 ## Ferramentas de IA utilizadas
 
-- **Claude (Anthropic)** — suporte técnico para dúvidas sobre Tailwind, escolha de bibliotecas e ajustes de estrutura HTML.
+- **Claude (Anthropic)** — suporte técnico para dúvidas sobre Tailwind, escolha de bibliotecas e ajustes pontuais de estrutura HTML. Não foi utilizado para decisões criativas ou de layout.
 
 ---
 
 ## Decisões técnicas
 
 - **Tailwind CSS via CDN** — escolhido pela agilidade no desenvolvimento, sem necessidade de instalação ou build;
-- **ApexCharts via CDN** — escolhido pela facilidade de integração com JavaScript puro e boa compatibilidade com tema escuro;
+- **ApexCharts via CDN** — escolhido pela facilidade de integração com JavaScript puro e boa compatibilidade com tema escuro. As áreas de gráfico estão reservadas no HTML; a implementação foi planejada para a etapa de integração em grupo;
 - **arquivo único `index.html`** — para simplicidade na entrega individual, com espaços reservados para futura integração com a API.
 
 ---
