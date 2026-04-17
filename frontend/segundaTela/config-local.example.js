@@ -1,1 +1,0 @@
-const GROQ_KEY = "sua-chave-aqui";

@@ -101,7 +101,7 @@
 
     <main class="grid grid-cols-1 xl:grid-cols-3 gap-4">
 
-      <section class="flex flex-col gap-4">
+      <section class="flex flex-col gap-4 xl:row-span-2">
 
         <article class="flex-1 rounded-xl p-5" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
           <h2 class="font-semibold">Status do projeto</h2>
@@ -152,8 +152,7 @@
       </section>
 
       <section class="flex flex-col gap-4">
-
-        <article class="flex-1 rounded-xl p-5" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
+        <article class="h-full rounded-xl p-5" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
           <p class="text-sm text-gray-400">Distribuição de tarefas</p>
           <div class="h-[180px] mt-4 flex items-center justify-center gap-8">
             <div id="grafico-tarefas" style="
@@ -170,59 +169,59 @@
             </ul>
           </div>
         </article>
-
-        <article class="flex-1 rounded-xl p-5" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
-          <p class="text-sm text-gray-400">Tarefas por prioridade</p>
-          <div class="grid grid-cols-2 gap-3 mt-4 mb-4">
-            <div class="bg-[#222] rounded-lg p-3">
-              <p class="text-sm text-gray-400">Atrasadas</p>
-              <p id="prio-atrasadas-val" class="text-3xl font-bold mt-2">—</p>
-            </div>
-            <div class="bg-[#222] rounded-lg p-3">
-              <p class="text-sm text-gray-400">Alta prioridade</p>
-              <p id="prio-alta-val" class="text-3xl font-bold mt-2">—</p>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div>
-              <div class="flex justify-between text-sm text-gray-400 mb-1">
-                <span>Alta</span><span id="prio-txt-alta" class="text-white">—</span>
-              </div>
-              <div class="bg-[#333] rounded-full h-1.5 overflow-hidden">
-                <div id="prio-bar-alta" class="h-full bg-red-600 w-0 transition-all duration-500"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-gray-400 mb-1">
-                <span>Média</span><span id="prio-txt-media" class="text-white">—</span>
-              </div>
-              <div class="bg-[#333] rounded-full h-1.5 overflow-hidden">
-                <div id="prio-bar-media" class="h-full bg-yellow-500 w-0 transition-all duration-500"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-gray-400 mb-1">
-                <span>Baixa</span><span id="prio-txt-baixa" class="text-white">—</span>
-              </div>
-              <div class="bg-[#333] rounded-full h-1.5 overflow-hidden">
-                <div id="prio-bar-baixa" class="h-full bg-blue-500 w-0 transition-all duration-500"></div>
-              </div>
-            </div>
-          </div>
-        </article>
-
       </section>
 
       <section class="flex flex-col gap-4">
-        <article class="flex-1 rounded-xl p-5" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
+        <article class="h-full rounded-xl p-5" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
           <p class="text-sm text-gray-400 mb-3">Membros da equipe</p>
           <div id="team-members-list" class="flex flex-col gap-2">
-            <p class="text-sm text-gray-400">Carregando...</p>
           </div>
         </article>
       </section>
 
+      <article class="flex flex-col min-h-[300px] rounded-xl p-5 xl:col-start-2 xl:col-span-2" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
+        <p class="text-sm text-gray-400">Kanban</p>
+        
+        <div class="grid grid-cols-3 gap-3 mt-4 flex-1">
+          
+          <div class="bg-[#222] rounded-lg p-4 flex flex-col">
+            <p class="text-sm text-gray-400 mb-4 font-semibold">A Fazer</p>
+            
+            <div class="space-y-3 flex-1 zona-drop">
+              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
+                Tarefa 1
+              </div>
+              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
+                Tarefa 2
+              </div>
+              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
+                Tarefa 3
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-[#222] rounded-lg p-4 flex flex-col">
+            <p class="text-sm text-gray-400 mb-4 font-semibold">Em Andamento</p>
+            
+            <div class="space-y-3 flex-1 zona-drop">
+              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
+                Tarefa 4
+              </div>
+            </div>
+          </div> 
+          
+          <div class="bg-[#222] rounded-lg p-4 flex flex-col">
+            <p class="text-sm text-gray-400 mb-4 font-semibold">Concluído</p>
+            
+            <div class="space-y-3 flex-1 zona-drop">
+              </div>
+          </div>        
+          
+        </div>
+      </article>
+
     </main>
+
   </div>
 
   <script src="config-local.js"></script>
