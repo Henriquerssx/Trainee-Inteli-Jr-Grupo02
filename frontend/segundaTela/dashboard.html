@@ -133,7 +133,7 @@
           <p class="text-xs text-gray-400">Total de tarefas</p>
           <h2 id="dash-total-tasks" class="text-5xl font-bold mt-3">—</h2>
           <p class="text-xs text-gray-500 mt-2">Visão geral</p>
-          <div class="grid grid-cols-3 gap-2 mt-4">
+          <div class="grid grid-cols-4 gap-2 mt-4">
             <div class="bg-[#222] rounded-lg p-3">
               <p class="text-xs text-gray-400">Feitas</p>
               <p id="dash-tasks-done" class="text-2xl font-bold mt-2">—</p>
@@ -141,6 +141,10 @@
             <div class="bg-[#222] rounded-lg p-3">
               <p class="text-xs text-gray-400">Fazendo</p>
               <p id="dash-tasks-doing" class="text-2xl font-bold mt-2">—</p>
+            </div>
+            <div class="bg-[#222] rounded-lg p-3">
+              <p class="text-xs text-gray-400">Em Revisão</p>
+              <p id="dash-tasks-revisao" class="text-2xl font-bold mt-2">—</p>
             </div>
             <div class="bg-[#222] rounded-lg p-3">
               <p class="text-xs text-gray-400">A Fazer</p>
@@ -163,9 +167,10 @@
               transition: background 0.5s ease;
             "></div>
             <ul class="legenda">
-              <li id="legenda-feitas"><span style="background:#c60505"></span> Feitas — 0%</li>
-              <li id="legenda-fazendo"><span style="background:#686262"></span> Fazendo — 0%</li>
               <li id="legenda-afazer"><span style="background:#c8c9c7"></span> A Fazer — 0%</li>
+              <li id="legenda-fazendo"><span style="background:#686262"></span> Fazendo — 0%</li>
+              <li id="legenda-revisao"><span style="background:#434141"></span> Em Revisão — 0%</li>
+              <li id="legenda-feitas"><span style="background:#c60505"></span> Feitas — 0%</li>
             </ul>
           </div>
         </article>
@@ -182,7 +187,7 @@
       <article class="flex flex-col min-h-[300px] rounded-xl p-5 xl:col-start-2 xl:col-span-2" style="background: linear-gradient(to bottom, transparent 0%, rgba(120,15,15,0.4) 100%);">
         <p class="text-sm text-gray-400">Kanban</p>
         
-        <div class="grid grid-cols-3 gap-3 mt-4 flex-1">
+        <div class="grid grid-cols-4 gap-3 mt-4 flex-1">
           
           <div class="bg-[#222] rounded-lg p-4 flex flex-col">
             <p class="text-sm text-gray-400 mb-4 font-semibold">A Fazer</p>
@@ -197,10 +202,16 @@
           </div> 
           
           <div class="bg-[#222] rounded-lg p-4 flex flex-col">
+            <p class="text-sm text-gray-400 mb-4 font-semibold">Em Revisão</p>
+            
+            <div class="space-y-3 flex-1 zona-drop" id="revisao"></div>
+          </div>
+          
+          <div class="bg-[#222] rounded-lg p-4 flex flex-col">
             <p class="text-sm text-gray-400 mb-4 font-semibold">Concluído</p>
             
             <div class="space-y-3 flex-1 zona-drop" id="done"></div>
-          </div>        
+          </div>     
           
         </div>
       </article>
@@ -209,6 +220,7 @@
 
   </div>
 
+  <script src="config-local.js"></script>
   <script src="api.js"></script>
   <script src="ai.js"></script>
   <script src="dashboard.js"></script>

@@ -57,6 +57,7 @@ function preencherTarefas(tarefas) {
   let concluidas = 0;
   let emAndamento = 0;
   let aFazer = 0;
+  let emRevisao = 0;
 
   tarefas.forEach(tarefa => {
     const status = (tarefa.status || "").toLowerCase();
@@ -65,6 +66,8 @@ function preencherTarefas(tarefas) {
       concluidas++;
     } else if (status.includes("andamento") || status.includes("doing")) {
       emAndamento++;
+    } else if (status.includes("revisão") || status.includes("revisao")) {
+      emRevisao++;
     } else {
       aFazer++;
     }
@@ -76,49 +79,59 @@ function preencherTarefas(tarefas) {
   document.getElementById("dash-tasks-done").innerText = concluidas;
   document.getElementById("dash-tasks-doing").innerText = emAndamento;
   document.getElementById("dash-tasks-todo").innerText = aFazer;
+  document.getElementById("dash-tasks-revisao").innerText = emRevisao;
 
-  atualizarGrafico(concluidas, emAndamento, aFazer);
+  atualizarGrafico(concluidas, emAndamento, emRevisao, aFazer);
 
-  return { total, concluidas, emAndamento, aFazer };
+  return { total, concluidas, emAndamento, emRevisao, aFazer };
 }
 
-function atualizarGrafico(concluidas, emAndamento, aFazer) {
-  const total = concluidas + emAndamento + aFazer;
+function atualizarGrafico(concluidas, emAndamento, emRevisao, aFazer) {
+  const total = concluidas + emAndamento + emRevisao + aFazer;
   const grafico = document.getElementById("grafico-tarefas");
 
   if (!grafico || total === 0) return;
 
   const pConcluidas = (concluidas / total) * 100;
   const pEmAndamento = (emAndamento / total) * 100;
+  const pEmRevisao = (emRevisao / total) * 100;
 
   const limite1 = pConcluidas;
   const limite2 = limite1 + pEmAndamento;
+  const limite3 = limite2 + pEmRevisao;
 
   grafico.style.background = `conic-gradient(
-    #c60505 0% ${limite1}%,
-    #686262 ${limite1}% ${limite2}%,
-    #c8c9c7 ${limite2}% 100%
+    #c8c9c7 0% ${(aFazer / total) * 100}%,
+    #686262 ${(aFazer / total) * 100}% ${((aFazer + emAndamento) / total) * 100}%,
+    #434141 ${((aFazer + emAndamento) / total) * 100}% ${((aFazer + emAndamento + emRevisao) / total) * 100}%,
+    #c60505 ${((aFazer + emAndamento + emRevisao) / total) * 100}% 100%
   )`;
 
-  document.getElementById("legenda-feitas").innerHTML =
-    `<span style="background:#c60505"></span> Feitas — ${Math.round(pConcluidas)}%`;
+  document.getElementById("legenda-afazer").innerHTML =
+    `<span style="background:#c8c9c7"></span> A Fazer — ${Math.round(100 - limite3)}%`;
 
   document.getElementById("legenda-fazendo").innerHTML =
     `<span style="background:#686262"></span> Fazendo — ${Math.round(pEmAndamento)}%`;
 
-  document.getElementById("legenda-afazer").innerHTML =
-    `<span style="background:#c8c9c7"></span> A Fazer — ${Math.round(100 - limite2)}%`;
+  document.getElementById("legenda-revisao").innerHTML =
+    `<span style="background:#434141"></span> Em Revisão — ${Math.round(pEmRevisao)}%`;
+
+  document.getElementById("legenda-feitas").innerHTML =
+    `<span style="background:#c60505"></span> Feitas — ${Math.round(pConcluidas)}%`;
+
 }
 
 function renderizarKanban(tarefas) {
   const todo = document.getElementById("todo");
   const doing = document.getElementById("doing");
+  const revisao = document.getElementById("revisao");
   const done = document.getElementById("done");
 
-  if (!todo || !doing || !done) return;
+  if (!todo || !doing || !revisao || !done) return;
 
   todo.innerHTML = "";
   doing.innerHTML = "";
+  revisao.innerHTML = "";
   done.innerHTML = "";
 
   tarefas.forEach(tarefa => {
@@ -143,6 +156,8 @@ function renderizarKanban(tarefas) {
     } else if (status.includes("conclu") || status.includes("done")) {
       done.appendChild(card);
 
+    } else if (status.includes("revisao") || status.includes("revisão")) {
+      revisao.appendChild(card);
     } else {
       // fallback → joga em "A Fazer"
       todo.appendChild(card);
