@@ -19,8 +19,8 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 ```bash
 Trainee-Inteli-Jr-Grupo02
-┣ docs                   # // documentação individual
-┣ frontend               # // acesso aos arquivos do projeto
+┣ docs                   # documentação individual
+┣ frontend               # acesso aos arquivos do projeto
 ┣ .gitignore             
 ┗ README.md
 ```
