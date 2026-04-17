@@ -32,6 +32,8 @@ Como percebi que talvez fosse necessário “ir além” e para ter um aprendiza
 
 ![Tela Figma2](./assets/figma-final.png) 
 
+Em relação às funcionalidades deste componente, destacam-se a visualização do progresso geral do projeto e a exibição de suas datas de início e término, cujos dados são alimentados de forma dinâmica via API. Além disso, o componente conta com uma funcionalidade de preview, estruturada para ser implementada futuramente por meio de um link de redirecionamento direto para o repositório do projeto ou mesmo imagem que poderia ser atualizada a cada Sprint pelo Product Owner. Há funcionalidades não exploradas, mas que aparecem nessa tela criada como o Kanban, Análise de IA (cuja ativação em código dependeria da configuração de uma chave de API válida), e Calendário. 
+
 Por não estar familiarizada com criação de interfaces, foi um processo longo de aprendizado ao tentar recriar essa tela. Embora não esteja completa, tentei reproduzir parte do conceito da tela utilizando HTML e CSS, que está disponível para visualização no arquivo `index.html` e `style.css`!
 
 
