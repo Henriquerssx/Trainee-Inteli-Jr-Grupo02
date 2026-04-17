@@ -187,34 +187,19 @@
           <div class="bg-[#222] rounded-lg p-4 flex flex-col">
             <p class="text-sm text-gray-400 mb-4 font-semibold">A Fazer</p>
             
-            <div class="space-y-3 flex-1 zona-drop">
-              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
-                Tarefa 1
-              </div>
-              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
-                Tarefa 2
-              </div>
-              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
-                Tarefa 3
-              </div>
-            </div>
+            <div class="space-y-3 flex-1 zona-drop" id="todo"></div>
           </div>
           
           <div class="bg-[#222] rounded-lg p-4 flex flex-col">
             <p class="text-sm text-gray-400 mb-4 font-semibold">Em Andamento</p>
             
-            <div class="space-y-3 flex-1 zona-drop">
-              <div draggable="true" class="bg-[#333] border border-[#444] p-3 rounded-md text-sm text-gray-200 shadow-md hover:bg-[#3a3a3a] transition-colors">
-                Tarefa 4
-              </div>
-            </div>
+            <div class="space-y-3 flex-1 zona-drop" id="doing"></div>
           </div> 
           
           <div class="bg-[#222] rounded-lg p-4 flex flex-col">
             <p class="text-sm text-gray-400 mb-4 font-semibold">Concluído</p>
             
-            <div class="space-y-3 flex-1 zona-drop">
-              </div>
+            <div class="space-y-3 flex-1 zona-drop" id="done"></div>
           </div>        
           
         </div>
@@ -224,7 +209,6 @@
 
   </div>
 
-  <script src="config-local.js"></script>
   <script src="api.js"></script>
   <script src="ai.js"></script>
   <script src="dashboard.js"></script>
