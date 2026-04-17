@@ -19,12 +19,23 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 ```bash
 Trainee-Inteli-Jr-Grupo02
-┣ nome-da-pasta-1        # 
-┣ nome-da-pasta-2        # 
-┣ nome-da-pasta-3        # 
-┣ arquivo-principal.js   # 
+┣ docs                   # // documentação individual
+┣ frontend               # // acesso aos arquivos do projeto
+┣ .gitignore             
 ┗ README.md
 ```
+
+## Relatório de IA 
+
+Para que a funcionalidade de **Relatório de IA** funcione corretamente no dashboard, é necessário configurar a chave da API do Groq no seu ambiente local. Siga os passos abaixo:
+
+1. Na raiz do projeto, localize o arquivo de exemplo: `config-local-example.js`.
+   
+2. Faça uma cópia/clone deste arquivo e renomeie-a para `config-local.js`.
+
+3. Abra o arquivo `config-local.js` recém-criado e insira a sua chave da API do Groq no local indicado.
+
+> **Importante:** O arquivo `config-local.js` não deve ser "comitado" no GitHub para evitar o vazamento da sua chave. Certifique-se de que ele esteja incluído no seu `.gitignore`.
 
 ---
 
