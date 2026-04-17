@@ -55,11 +55,10 @@ Para que a funcionalidade de **Relatório de IA** funcione corretamente no dashb
 
 **Utilizou IA no projeto?** Sim, apenas como assistente pontual. Optamos por construir a aplicação do zero, valorizando o esforço intelectual e a lógica autoral da equipe. Acreditamos que essa entrega se tratava do quanto estávamos dispostos a criar e aprender, e não em gerar um projeto com muitos artifícios de IA.
 
-| Ferramenta de IA | Ocasião / Finalidade             | Como foi utilizada?                                               |
-| ---------------- | -------------------------------- | ----------------------------------------------------------------- |
-| preencher        | preencher                        | preencher   |
-| preencher        | preencher                        | preencher   |
-
+| Ferramenta de IA   | Ocasião / Finalidade                         | Como foi utilizada?                                                                                                                      |
+| ------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ChatGPT            | Formatação de dados da API para cards        | Auxílio pontual na estruturação e formatação dos dados retornados pela API para exibição nos cards.                                      |
+| Claude (Anthropic) | Suporte técnico no desenvolvimento front-end | Dúvidas sobre Tailwind, escolha de bibliotecas e ajustes pontuais de estrutura HTML. Não utilizado para decisões criativas ou de layout. |
 ---
 
 ## Divisão de Responsabilidades
