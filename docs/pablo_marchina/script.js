@@ -1,8 +1,8 @@
 // projetos genericos só para testar
 let projetos = [
-  { nome: "Sistema escolar", status: "andamento" },
-  { nome: "Site institucional", status: "concluido" },
-  { nome: "App mobile", status: "andamento" }
+  { id: 1, nome: "Sistema escolar",    status: "andamento", progresso: 65,  owner: "Mariana Costa" },
+  { id: 2, nome: "Site institucional", status: "concluido", progresso: 100, owner: "Rafael Silva"   },
+  { id: 3, nome: "App mobile",         status: "andamento", progresso: 30,  owner: "João Pedro"     }
 ];
 
 // colocando os elementos 
@@ -17,6 +17,15 @@ function renderizar(lista) {
   // limpa a tela
   cards.innerHTML = "";
 
+  if (lista.length === 0) {
+    cards.innerHTML = `
+      <div class="empty-state">
+        <p>Nenhum projeto encontrado.</p>
+      </div>
+    `;
+    return;
+  }
+
   // para cada projeto
   lista.forEach((p, index) => {
 
@@ -24,11 +33,23 @@ function renderizar(lista) {
     const card = document.createElement("div");
     card.className = "card";
 
-    card.innerHTML = `
-        <h4>${p.nome}</h4>
-        <p>${p.status}</p>
+    const cores = { andamento: "#C4203B", concluido: "#2ECC71", revisao: "#F4A217" };
+    card.style.setProperty("--card-accent", cores[p.status] || "#333");
 
-        <button onclick="remover(${index})">remover</button>
+    card.innerHTML = `
+      <h4>${p.nome}</h4>
+      <span class="badge ${p.status}">${p.status}</span>
+      <div class="card-owner">${p.owner}</div>
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>progresso</span>
+          <span>${p.progresso}%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="width: ${p.progresso}%; background: ${cores[p.status] || '#C4203B'}"></div>
+        </div>
+      </div>
+      <button class="btn-remover" onclick="remover(${p.id})">remover</button>
     `;
 
     cards.appendChild(card);
@@ -51,17 +72,20 @@ function filtrar() {
 // botão para adionar projeto
 btn.onclick = () => {
   const nome = prompt("Nome do projeto:");
-  const statusNovo = prompt("Status (andamento/concluido):");
+  const statusNovo = prompt("Status: digite 'andamento' ou 'concluido'");
+  const statusValido = ["andamento", "concluido"];
 
-  if (nome && statusNovo) {
-    projetos.push({ nome, status: statusNovo });
+  if (nome && statusValido.includes(statusNovo)) {
+    projetos.push({ id: Date.now(), nome, status: statusNovo });
     filtrar();
+  } else if (nome) {
+    alert("Status inválido. Use 'andamento' ou 'concluido'.");
   }
 };
 
 // para remover algum projeto
-function remover(index) {
-  projetos.splice(index, 1);
+function remover(id) {
+  projetos = projetos.filter(p => p.id !== id);
   filtrar();
 }
 

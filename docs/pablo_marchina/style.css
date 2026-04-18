@@ -90,19 +90,22 @@ h1 {
   margin-bottom: 15px;
 }
 
-button {
-  margin-bottom: 20px;
-  padding: 7px 12px;
+.btn-remover {
+  margin-top: 12px;
+  padding: 4px 10px;
   background: transparent;
-  border: 1px solid #333;
-  color: #aaa;
+  border: 0.5px solid #1f1f1f;
+  color: #333;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
+  font-family: "Fragment Mono", monospace;
+  letter-spacing: 0.08em;
+  border-radius: 3px;
+  transition: color 0.15s, border-color 0.15s;
 }
-
-button:hover {
-  color: white;
-  border-color: #555;
+.btn-remover:hover {
+  color: #E8294A;
+  border-color: rgba(232,41,74,0.3);
 }
 
 .grid {
@@ -115,6 +118,8 @@ button:hover {
   padding: 14px;
   border-radius: 8px;
   background: #111;
+  border-top: 1.5px solid var(--card-accent, #222);
+  align-self: start; 
 }
 
 .card h4 {
@@ -132,4 +137,78 @@ button:hover {
 .status {
   font-size: 10px;
   color: #777;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 0.5px solid;
+  margin: 6px 0 12px;
+}
+.badge.andamento { 
+  color: #E8294A; 
+  border-color: rgba(232,41,74,0.3); 
+  background: rgba(232,41,74,0.08); 
+}
+.badge.concluido { 
+  color: #2ECC71; 
+  border-color: rgba(46,204,113,0.3); 
+  background: rgba(46,204,113,0.08); 
+}
+.badge.revisao { 
+  color: #F4A217; 
+  border-color: rgba(244,162,23,0.3); 
+  background: rgba(244,162,23,0.08); 
+}
+
+.progress-wrap {
+  margin: 10px 0 12px;
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #444;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.progress-track {
+  height: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 1px;
+}
+
+.card {
+  padding: 14px;
+  border-radius: 8px;
+  background: #111;
+  border-top: 1.5px solid var(--card-accent, #222); /* linha de acento */
+  transition: border-color 0.2s;
+}
+.card:hover {
+  background: #141414;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid #1a1a1a; /* adicionar isso */
+  min-height: calc(100vh - 64px);
+}
+
+.card-owner {
+  font-size: 10px;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
 }
