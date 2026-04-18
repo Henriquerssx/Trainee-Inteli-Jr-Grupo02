@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Fragment Mono", monospace;
   background: #07090f;
   color: #f2f4f7;
 }
@@ -68,6 +68,7 @@ body {
   font-weight: 600;
   padding: 10px 14px;
   cursor: pointer;
+  font-family: "Fragment Mono", monospace;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   box-shadow: 0 8px 18px rgba(220, 38, 38, 0.18);
 }

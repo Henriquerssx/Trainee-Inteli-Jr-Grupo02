@@ -59,6 +59,7 @@ Para que a funcionalidade de **Relatório de IA** funcione corretamente no dashb
 | ------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | ChatGPT            | Formatação de dados da API para cards        | Auxílio pontual na estruturação e formatação dos dados retornados pela API para exibição nos cards.                                      |
 | Claude (Anthropic) | Suporte técnico no desenvolvimento front-end | Dúvidas sobre Tailwind, escolha de bibliotecas e ajustes pontuais de estrutura HTML. Não utilizado para decisões criativas ou de layout. |
+| Gemini (Google) | Suporte técnico no desenvolvimento da integração com o Groq e revisor de código | Garantindo que o código de integração com Groq estava funcional e operacional e ajuda na revisão do código da dashboard e da integração com IA. |
 ---
 
 ## Divisão de Responsabilidades
@@ -81,7 +82,7 @@ Para que a funcionalidade de **Relatório de IA** funcione corretamente no dashb
 | Nome           | Papel / Foco             | Entregas Realizadas |
 | -------------- | ------------------------ | ------------------- |
 | José           | Desenvolvedor Front-end   | Responsável por testar os endpoints e repassar para a equipe, além de desenvolver o código da segunda tela. |
-| Lucas Delmiro  | Integração com IA        | Responsável por estudar e implementar a integração com IA no projeto, realizando testes iniciais e a implementando. |
+| Lucas Delmirio  | Integração com IA        | Responsável por estudar e implementar a integração com IA no projeto, realizando testes iniciais e a implementando. |
 | Pablo Marchina | Desenvolvedor Front-end  | Responsável por desenvolver a programação da tela inicial do projeto, criando a base para aprimoramento. |
 | Mariana Moussa | Desenvolvedora Front-end | Responsável por iniciar a programação da segunda tela do projeto, adicionando os elementos essenciais. |
 | Vitor Tadashi  | Desenvolvedor Front-end  | Responsável por iniciar o conceito da segunda tela do projeto, propondo ideias e contribuindo para o desenvolvimento conjunto. |
