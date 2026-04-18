@@ -1,35 +1,39 @@
-/* Config da tela geral */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Fragment Mono", monospace;
+  font-weight: 300;
 }
+
+
 
 body {
-  background: #05060F;
-  color: #e5e5e5;
+  
+    background-color: #03030a;
+
+    background-image: radial-gradient(#ff00000f 15%, transparent 16%);
+  
+    background-size: 20px 20px; 
+    
+    color: white;
+
 }
 
-/* Barra no topo */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
-  background: #05060F;
+  background: linear-gradient(to bottom, #e72b2b39, #03030a);
   
   
-  /* Bordas com reflexo suave de vidro */
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  
-  /* Faz a barra flutuar e ficar presa no topo */
   position: sticky;
   top: 0;
   z-index: 100;
 }
-/* container da logo */
+
 .logo {
   display: flex;
   align-items: center; 
@@ -40,24 +44,23 @@ body {
   display: flex;
   letter-spacing: 2px;
   color:rgb(206, 60, 60);
-  flex-direction: column; /* Isto é o que força uma palavra para baixo da outra */
-  align-items: flex-start; /* Alinha o texto à esquerda */
-  justify-content: center; /* Centraliza verticalmente em relação à imagem */
+  flex-direction: column; 
+  justify-content: center; 
 }
 
 .separador {
-  color: #444; /* Um cinza mais escuro para ficar discreto */
-  font-size: 14px; /* Tamanho da barra */
-  user-select: none; /* Evita que o usuário consiga selecionar a barra com o mouse */
+  color: #444; 
+  font-size: 14px;
+  user-select: none;
 }
 
 .texto-logo span:last-child {
   font-size: 12px;
   letter-spacing: -0.7px; 
-  color: #aaa; /* Deixa ele num tom um pouco mais claro */
+  color: #aaa; 
 }
 
-/* imagem da logo */
+
 .logo img {
   width: 26px;     
   height: auto;
@@ -68,7 +71,23 @@ body {
 nav {
   display: flex;
   align-items: center;
-  gap: 16px; /* Este é o espaço perfeito e igual entre a palavra, o | e a outra palavra */
+  gap: 16px; 
+}
+
+header {
+    color: white;        
+    padding: 20px;    
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;     
+}
+
+.subtitulo {
+    margin: 2px 0 0 0;
+    font-size: 1.2rem;     
+    color: #ea5151;           
 }
 
 .navbar a {
@@ -82,170 +101,135 @@ nav {
   color: #fff;
 }
 
-.layout {
-  display: flex;
+
+
+
+.menu {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 230px;                 
+    list-style: none;
+    padding: 0 0 0 12px;         
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -15px;
 }
 
-/* Removemos o display: flex do layout antigo para ele ocupar a tela toda */
-.layout {
-  display: block; 
+.barra-navegacao {
+    width: 100%;
+    padding: 20px 0;
 }
 
-/* Coloca o título de um lado e os filtros do outro */
-.dashboard-header {
-  display: flex;
-  justify-content: space-between; /* Empurra o h1 para a esquerda e os filtros para a direita */
-  align-items: center; /* Centraliza verticalmente */
-  margin-bottom: 20px;
+.menu li {
+    display: inline-block;
 }
 
-/* Remove a margem antiga do h1 para ele não empurrar os filtros para cima */
-.dashboard-header h1 {
-  margin-bottom: 0;
+.menu a.ativo {
+    color: #ffffff; 
 }
 
-/* Organiza os filtros lado a lado */
-.filtros-topo {
-  display: flex;
-  gap: 12px;
+.menu a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+    font-size: 1.3rem;
+    transition: 0.3s;
 }
 
-/* Deixa os campos de filtro com um visual limpo e moderno */
-.filtros-topo input,
-.filtros-topo select {
-  padding: 8px 12px;
-  background: transparent;
-  border: 1px solid #333;
-  color: #ccc;
-  font-size: 12px;
-  border-radius: 4px;
+.menu a:hover {
+    color: #ffffff;
 }
 
-.filtros-topo select option {
-  background-color: #0c0808; /* Um preto com um fundo beeeeem levemente avermelhado/quente */
-  color: #e5e5e5; /* A mesma cor de texto que você usou no body */
-  font-family: "Fragment Mono", monospace; /* Garante que a fonte continue a mesma do seu site */
-}
-.filtros-topo input:focus,
-.filtros-topo select:focus {
-  outline: none;
-  border-color: #777; /* Dá um leve brilho na borda ao clicar */
+.container-cards {
+    display: flex;        
+    align-items: flex-start; 
+    gap: 20px;            
+    margin-left: 20px;
+    margin-top: -10px;
+    
 }
 
-/* Tela principal dos projetos */
-.main {
-  flex: 1;
-  padding: 30px;
+.card-projeto, .card-andamento, .card-equipe {
+   
+    background: rgba(158, 158, 158, 0.041);
+    border: 1px solid rgba(16, 16, 16, 0.217); 
+    padding: 20px;
+    border-radius: 8px;
+    flex-shrink: 0; 
 }
 
-.main p {
-  font-size: 11px;
-  color: #555;
-  margin-bottom: 5px;
+.card-projeto {
+    width: 400px; 
+    height: 300px;
 }
 
-h1 {
-  font-size: 25px;
-  font-weight: normal;
-  margin-bottom: 15px;
+.card-andamento {
+    width: 600px;
+    height: 300px;
+    
 }
 
-button {
-  margin-bottom: 20px;
-  padding: 7px 12px;
-  background: transparent;
-  border: 1px solid #333;
-  color: #aaa;
-  cursor: pointer;
-  font-size: 12px;
+.card-equipe {
+    width: 400px;
+    height: 300px;
+    margin: 20px; 
 }
 
-button:hover {
-  color: white;
-  border-color: #555;
+.equipe {
+  display: flex;           
+  justify-content: center;   
+  align-items: center;       
+  color: #aaaaaa;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.card {
-  padding: 12px;
-  border-radius: 10px;
-  background: #121212;
-
-  height: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Empurra o topo para cima e o rodapé para baixo */
-  gap: 12px; /* Dá um espaço padrão entre o topo, a descrição e o botão */
-  
-  /* Removemos o background: #111; antigo e colocamos o gradiente */
-  background: linear-gradient(to bottom, transparent 0%, rgba(120, 15, 15, 0.4) 100%);
-  
-  
-  transition: all 0.3s ease;
+.andamento {
+  display: flex;            
+  justify-content: center;  
+  align-items: center;       
+  text-align: center;
+  color: #aaaaaa;
 }
 
 
-
-.card:hover {
-  /* 1. Levanta o cartão 5 pixels para cima */
-  transform: translateY(-5px); 
-  
-  /* 3. Deixa o gradiente vermelho do fundo mais intenso */
-  background: linear-gradient(to bottom, transparent 0%, rgba(137, 16, 16, 0.7) 100%);
-  
-  /* 4. Adiciona uma sombra preta embaixo para dar a ilusão de que descolou da tela */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); 
+.progresso-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin-bottom: 8px;
 }
 
-.card h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #b12b2b;
+.progresso-fundo {
+    background-color: #333333;
+    height: 8px; 
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 25px;
 }
 
-.card h5 {
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: normal;
-  color: #9f9797b0;
+.progresso-barra {
+    height: 100%;
+    background-color: #f35353; 
+    transition: width 0.5s ease; 
+
 }
 
-.card p {
-  font-size: 13px;
-  color: #9f979777;
-  margin: 6px 0 10px;
+.detalhes-projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+
 }
 
-.preview-box {
-  position: relative;
-  height: 140px;
-  margin-top: 12px;
-  border: 1px dashed #333;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #101010;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 11px;
+.detalhe-linha {
+    display: flex;
+    justify-content: space-between; 
+    font-size: 0.9rem;
+    color: #e94e4e;
+    font-style: italic;
 }
 
-.preview-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-.preview-input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
+.texto-branco {
+    color: white;
+    font-weight: bold;
 }

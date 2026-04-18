@@ -5,9 +5,9 @@
 Desenvolvido como parte do programa Trainee da Inteli JR, o Gerenciador de Projetos é uma plataforma focada em organização e produtividade. Nosso principal objetivo é facilitar o acompanhamento diário das atividades da IJ por meio de um dashboard completo, oferecendo uma visão clara, centralizada e visual do andamento das tarefas.
 
 **Principais Funcionalidades:**
-* Relatório de IA.
-* Navegação entre tela inicial (vitrine de projetos) e dashboard específico.
-* Filtragem de visualização de projetos prontos, em desenvolvimento e em revisão.
+* **Relatório de IA:** Geração de relatórios inteligentes com métricas de avanços, identificação de gargalos enfrentados e um resumo executivo do projeto.
+* **Navegação Dinâmica:** Transição fluida entre a tela inicial (vitrine de projetos) e o dashboard específico de cada atividade.
+* **Sistema de Filtros:** Filtragem eficiente para visualização segmentada de projetos (prontos, em desenvolvimento e em revisão).
   
 # Estrutura do Sistema
 
@@ -19,12 +19,23 @@ Descreva abaixo como o projeto está estruturado tanto fisicamente (pastas e arq
 
 ```bash
 Trainee-Inteli-Jr-Grupo02
-┣ nome-da-pasta-1        # 
-┣ nome-da-pasta-2        # 
-┣ nome-da-pasta-3        # 
-┣ arquivo-principal.js   # 
+┣ docs                   # documentação individual
+┣ frontend               # acesso aos arquivos do projeto
+┣ .gitignore             
 ┗ README.md
 ```
+
+## Relatório de IA 
+
+Para que a funcionalidade de **Relatório de IA** funcione corretamente no dashboard, é necessário configurar a chave da API do Groq no seu ambiente local. Siga os passos abaixo:
+
+1. Na raiz do projeto, localize o arquivo de exemplo: `config-local-example.js`.
+   
+2. Faça uma cópia/clone deste arquivo e renomeie-a para `config-local.js`.
+
+3. Abra o arquivo `config-local.js` recém-criado e insira a sua chave da API do Groq no local indicado.
+
+> **Importante:** O arquivo `config-local.js` não deve ser "comitado" no GitHub para evitar o vazamento da sua chave. Certifique-se de que ele esteja incluído no seu `.gitignore`.
 
 ---
 
@@ -44,11 +55,10 @@ Trainee-Inteli-Jr-Grupo02
 
 **Utilizou IA no projeto?** Sim, apenas como assistente pontual. Optamos por construir a aplicação do zero, valorizando o esforço intelectual e a lógica autoral da equipe. Acreditamos que essa entrega se tratava do quanto estávamos dispostos a criar e aprender, e não em gerar um projeto com muitos artifícios de IA.
 
-| Ferramenta de IA | Ocasião / Finalidade             | Como foi utilizada?                                               |
-| ---------------- | -------------------------------- | ----------------------------------------------------------------- |
-| preencher        | preencher                        | preencher   |
-| preencher        | preencher                        | preencher   |
-
+| Ferramenta de IA   | Ocasião / Finalidade                         | Como foi utilizada?                                                                                                                      |
+| ------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ChatGPT            | Formatação de dados da API para cards        | Auxílio pontual na estruturação e formatação dos dados retornados pela API para exibição nos cards.                                      |
+| Claude (Anthropic) | Suporte técnico no desenvolvimento front-end | Dúvidas sobre Tailwind, escolha de bibliotecas e ajustes pontuais de estrutura HTML. Não utilizado para decisões criativas ou de layout. |
 ---
 
 ## Divisão de Responsabilidades
